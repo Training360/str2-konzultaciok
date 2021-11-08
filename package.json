@@ -1,0 +1,12 @@
+{
+  "name": "Konzultaciok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js1-arrow-function-2021-10-27.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+.modal__open {
+    background-color: rgb(36, 36, 206);
+    border: 1px none;
+    border-radius: 0.15rem;
+    box-sizing: border-box;
+    color: white;
+    float: right;
+    padding: 0.40rem 1rem;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    visibility: hidden;
+    width: 100%;
+}
+
+.modal__visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+    visibility: visible;
+}
+
+.modal__content {
+    background-color: white;
+    border: 1px solid rgb(119, 118, 118);
+    box-sizing: border-box;
+    left: 50%;
+    margin: 1% auto;
+    padding: 1.1rem;
+    position: absolute;
+    animation: fadein .3s;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__close {
+    background-color: transparent;
+    border: 1px none;
+    float: right;
+    font-size: 1rem;
+}
+
+.btn--green {
+    background-color:  rgb(24, 168, 24);
+    border: 1px none;
+    border-radius: 0.15rem;
+    box-sizing: border-box;
+    color: white;
+    padding: 0.40rem 1rem;
+}
+
+.btn--red {
+    background-color:  rgb(236, 47, 47);
+    border: 1px none;
+    border-radius: 0.15rem;
+    box-sizing: border-box;
+    color: white;
+    padding: 0.4rem 1rem;
+}
+
+.footer__btn {
+    bottom: 0;
+    float: right;
+    margin: -1rem 0.2rem;
+}
+
+@media only screen and (min-width: 560px) {
+    .modal__content {
+       width: 50%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .modal__content {
+       width: 100%;
+    }
+}
