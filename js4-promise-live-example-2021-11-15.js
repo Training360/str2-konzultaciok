@@ -1,4 +1,4 @@
-const url1 = 'https://ra.githubusercontent.com/openfootball/football.json/master/2020-21/at.1.json';
+const url1 = 'https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/at.1.json';
 const url2 = 'https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/ch.1.json';
 const url3 = 'https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/hu.1.json';
 

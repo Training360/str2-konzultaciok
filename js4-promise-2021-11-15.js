@@ -72,7 +72,7 @@ Promise.allSettled([makeOven('cheese'), makeOven('chocolate'), makeOven('caramel
     cakes => console.log(cakes),
 );
 
-// Promise statuses: pending, fulfilled, rejected
+// Promise statuses: pending, fulfilled, rejected, settled (fulfilled|rejected)
 
 
 
