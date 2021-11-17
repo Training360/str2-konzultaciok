@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetch Gyakorlatok</h1>
+    <p id="clock"></p>
+    <script type="module"> import { 
+            getUsers, 
+            getList, 
+            getUserList, 
+            getListAsync, 
+            getListWithPromise 
+        } from './js4-async-await-2021-11-17.js';
+
+        // getUsers('https://nettuts.hu/jms/js4-002/users');
+        getListAsync('https://nettuts.hu/jms/js4-002/movies');
+
+        setTimeout( () => console.log(getUserList()), 2000 );
+
+        getListWithPromise('https://nettuts.hu/jms/js4-002/products').then(
+            products => console.log(products),
+        );
+    </script>
+    <script>
+        const clock = document.querySelector('#clock');
+        const createTime = (date = new Date()) => {
+            const intlHu = Intl.DateTimeFormat('hu', {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+            });
+            const output = intlHu.format(date);
+            clock.textContent = output;
+            return new Promise((resolve) => {
+                let id = setTimeout(() => {
+                    clearTimeout(id);
+                    resolve();
+                }, 1000);
+            });
+        };
+        
+        (async () => {
+            while (true) {
+                await createTime();
+            }
+        })();
+    </script>
+</body>
+
+</html>
