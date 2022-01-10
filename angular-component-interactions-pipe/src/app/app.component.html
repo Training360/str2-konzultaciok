@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Active</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.active }}</td>
+            <td>
+              <button (click)="setSelectedUser(user)" class="btn btn-info">
+                <i class="fa fa-eye"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4 pt-5">
+      <app-user-card (removeUser)="deleteUser($event)" [currentUser]="selectedUser"></app-user-card>
+    </div>
+  </div>
+</div>

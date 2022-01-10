@@ -1,0 +1,28 @@
+<ng-container *ngIf="user">
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info"> {{ user.id }} </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info">{{ user.name }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info">{{ user.address }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info">{{ user.active }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button (click)="startRemoveUser()" class="btn btn-danger btn-block">
+        <i class="fa fa-trash"></i> delete </button>
+    </div>
+  </div>
+</ng-container>
