@@ -92,7 +92,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngc-esbuild-devkit:test",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
