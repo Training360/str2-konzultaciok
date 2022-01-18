@@ -21,7 +21,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngc-esbuild-devkit:build",
           "options": {
             "outputPath": "dist/angular-observables-http",
             "index": "src/index.html",
@@ -74,7 +74,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngc-esbuild-devkit:serve",
           "configurations": {
             "production": {
               "browserTarget": "angular-observables-http:build:production"

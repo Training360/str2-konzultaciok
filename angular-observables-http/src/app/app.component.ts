@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './model/user';
 import { UserService } from './service/user.service';
@@ -8,7 +8,7 @@ import { UserService } from './service/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, DoCheck {
   title = 'angular-observables-http';
 
   users$: Observable<User[]> = this.userService.getAll();
@@ -23,5 +23,9 @@ export class AppComponent implements OnInit {
       //   err => console.error('Error: ', err),
       //   () => console.log('complete'),
       // );
+  }
+
+  ngDoCheck(): void {
+    console.log('Variables checked');
   }
 }

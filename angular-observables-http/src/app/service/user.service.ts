@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 import { User } from '../model/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UserService {
 
