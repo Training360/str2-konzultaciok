@@ -1,10 +1,14 @@
 <div class="row">
   <div *ngIf="user$ | async as user" class="col-6 offset-3">
-    <form #userForm="ngForm" (ngSubmit)="onUpdate(user)" class="mt-3">
+    <form #userForm="ngForm" (ngSubmit)="onUpdate(userForm)" class="mt-3">
       <input [(ngModel)]="user.id" name="id" type="hidden">
       <div class="form-group">
         <label for="">Name</label>
-        <input [(ngModel)]="user.name" name="name" type="text" class="form-control">
+        <input [(ngModel)]="user.name" name="name" type="text" class="form-control"
+          required pattern="^.{4,25}$" [ngModelOptions]="{updateOn: 'blur'}">
+        <div [hidden]="userForm.controls['name']?.valid" class="error-message">
+          Please type a valid name!
+        </div>
       </div>
       <div class="form-group">
         <label for="">Email</label>

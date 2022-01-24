@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserEditComponent } from './page/user-edit/user-edit.component';
+import { UserEditorComponent } from './page/user-editor/user-editor.component';
 import { HomeComponent } from './page/home/home.component';
 import { UserComponent } from './page/user/user.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
@@ -13,7 +13,7 @@ import { NavigationComponent } from './common/navigation/navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
-    UserEditComponent,
+    UserEditorComponent,
     HomeComponent,
     UserComponent,
     NavigationComponent
