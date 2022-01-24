@@ -1,0 +1,30 @@
+<div class="row">
+  <div *ngIf="user$ | async as user" class="col-6 offset-3">
+    <form #userForm="ngForm" (ngSubmit)="onUpdate(user)" class="mt-3">
+      <input [(ngModel)]="user.id" name="id" type="hidden">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input [(ngModel)]="user.name" name="name" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input [(ngModel)]="user.email" email name="email" type="email" class="form-control">
+        <div [hidden]="userForm.controls['email']?.valid" class="error-message">
+          Please type a valid email address!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Cat.</label>
+        <input [(ngModel)]="user.category" name="category" type="text" class="form-control">
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning">
+          Cancel
+        </button>
+        <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary btn-block">
+          <i class="fa fa-save"></i> Update
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
