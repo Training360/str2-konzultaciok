@@ -17,8 +17,10 @@
           <td>{{ user.email }}</td>
           <td>{{ user.category }}</td>
           <td>
-            <button [routerLink]="['/', 'user-edit', user.id]" class="btn btn-info">
-              <i class="fa fa-eye"></i>
+            <button
+              [routerLink]="['/', 'user-edit-reactive', user.id]"
+              class="btn btn-info">
+                <i class="fa fa-eye"></i>
             </button>
           </td>
         </tr>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,8 @@ import { UserEditComponent } from './page/user-edit/user-edit.component';
 import { HomeComponent } from './page/home/home.component';
 import { UserComponent } from './page/user/user.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { UserEditReactiveComponent } from './page/user-edit-reactive/user-edit-reactive.component';
+import { NotFoundComponent } from './page/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,15 @@ import { NavigationComponent } from './common/navigation/navigation.component';
     UserEditComponent,
     HomeComponent,
     UserComponent,
-    NavigationComponent
+    NavigationComponent,
+    UserEditReactiveComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],
