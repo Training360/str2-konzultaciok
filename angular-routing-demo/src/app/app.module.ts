@@ -1,36 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserEditComponent } from './page/user-edit/user-edit.component';
 import { HomeComponent } from './page/home/home.component';
-import { UserComponent } from './page/user/user.component';
-import { NavigationComponent } from './common/navigation/navigation.component';
-import { UserEditReactiveComponent } from './page/user-edit-reactive/user-edit-reactive.component';
-import { NotFoundComponent } from './page/not-found/not-found.component';
 import { ProductComponent } from './page/product/product.component';
-import { ProductEditorComponent } from './page/product-editor/product-editor.component';
+import { UserComponent } from './page/user/user.component';
+import { AboutComponent } from './page/about/about.component';
+import { LoginComponent } from './page/login/login.component';
+import { NavigationComponent } from './common/navigation/navigation.component';
+import { UserEditComponent } from './page/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserEditComponent,
     HomeComponent,
-    UserComponent,
-    NavigationComponent,
-    UserEditReactiveComponent,
-    NotFoundComponent,
     ProductComponent,
-    ProductEditorComponent
+    UserComponent,
+    AboutComponent,
+    LoginComponent,
+    NavigationComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './page/about/about.component';
 import { HomeComponent } from './page/home/home.component';
-import { NotFoundComponent } from './page/not-found/not-found.component';
-import { ProductEditorComponent } from './page/product-editor/product-editor.component';
+import { LoginComponent } from './page/login/login.component';
 import { ProductComponent } from './page/product/product.component';
-import { UserEditReactiveComponent } from './page/user-edit-reactive/user-edit-reactive.component';
 import { UserEditComponent } from './page/user-edit/user-edit.component';
 import { UserComponent } from './page/user/user.component';
 
@@ -18,24 +17,24 @@ const routes: Routes = [
     component: UserComponent,
   },
   {
-    path: 'user-edit/:id',
+    path: 'user/edit/:id',
     component: UserEditComponent,
-  },
-  {
-    path: 'user-edit-reactive/:id',
-    component: UserEditReactiveComponent,
   },
   {
     path: 'product',
     component: ProductComponent,
   },
   {
-    path: 'product/edit/:id',
-    component: ProductEditorComponent,
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '**',
-    component: NotFoundComponent,
+    redirectTo: '',
   },
 ];
 

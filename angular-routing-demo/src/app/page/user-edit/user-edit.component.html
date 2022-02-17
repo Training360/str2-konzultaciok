@@ -1,0 +1,7 @@
+<div *ngIf="errorMessage" class="alert alert-danger">
+  <strong>Hiba: </strong> {{ errorMessage }}
+</div>
+
+<p>
+  User: {{ user | async | json }}
+</p>

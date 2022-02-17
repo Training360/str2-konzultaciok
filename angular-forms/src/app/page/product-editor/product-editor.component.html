@@ -1,0 +1,41 @@
+<div class="row">
+  <div *ngIf="product$ | async as product" class="col-6 offset-3">
+    <form #productForm="ngForm" (ngSubmit)="onUpdate(product)">
+      <input [(ngModel)]="product.id" type="hidden" name="id">
+      <div class="form-group">
+        <label for="name-id">Name</label>
+        <input
+          required
+          pattern="^[a-űA-Ű]{5,20}$"
+          [(ngModel)]="product.name"
+          class="form-control"
+          type="text"
+          name="name"
+          id="name-id">
+      </div>
+      <div class="form-group">
+        <label for="price-id">Price</label>
+        <input
+          required
+          [(ngModel)]="product.price"
+          class="form-control"
+          type="text"
+          name="price"
+          id="price-id">
+      </div>
+      <div class="form-group">
+        <label for="category-id">Category</label>
+        <input
+          required
+          [(ngModel)]="product.category"
+          class="form-control"
+          type="text"
+          name="category"
+          id="category-id">
+      </div>
+      <button [disabled]="productForm.invalid" type="submit" class="btn btn-primary btn-block">
+        <i class="fa fa-save"></i>
+      </button>
+    </form>
+  </div>
+</div>
