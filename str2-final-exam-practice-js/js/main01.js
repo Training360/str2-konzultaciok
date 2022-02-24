@@ -1,5 +1,27 @@
 import products from './products.js';
 
+// Általános tábla megjelenítő függvény.
+const makeTable = (list = products) => {
+    const table = document.querySelector('table');
+    const tbody = table.querySelector('tbody');
+
+    list.forEach( item => {
+        const tr = document.createElement('tr');
+        Object.values(item).forEach( val => {
+            const td = document.createElement('td');
+            td.textContent = val;
+            td.classList.add('product-cell');
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+
+    table.querySelectorAll('thead tr th').forEach( item => {
+        item.style.fontStyle = 'italic';
+        item.style.color = 'navy';
+     } );
+};
+
 const expensiveProducts = products.filter( product => product.price > 25 );
 
 const orderedProducts = products.sort( (a, b) => {
@@ -20,4 +42,6 @@ const db = products.map( product => {
 
 console.log(db);
 console.log(products);
+
+makeTable(db);
 
