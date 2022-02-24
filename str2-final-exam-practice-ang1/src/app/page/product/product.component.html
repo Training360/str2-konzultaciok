@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <th>#</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Cat.</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of list$ | async">
+      <td>{{ row.id }}</td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.price }}</td>
+      <td>{{ row.category }}</td>
+      <td>
+        <div class="btn-group">
+          <button  [routerLink]="['/', 'product', 'edit', row.id]" class="btn btn-info">
+            <i class="fa fa-pencil"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
